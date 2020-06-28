@@ -59,18 +59,21 @@ public class OperacionesTrabajadorCyV implements IDepComun,IDepCompras,IDepVenta
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+
+
+
     @Override
-    public void enviarCorreo(Empresa nuevaEmpresa, Trabajador tOrigen, String tDestino) {
+    public void enviarCorreo(Empresa nuevaEmpresa, String tDestino, Trabajador tOrigen) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void checkCorreoNoContestado(Trabajador t) {
+    public int checkCorreoNoContestado(Trabajador t, Empresa nuevaEmpresa) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void checkCorreoNoLeido(Trabajador t) {
+    public int checkCorreoNoLeido(Trabajador t) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
