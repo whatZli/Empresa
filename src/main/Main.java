@@ -11,7 +11,7 @@ import app_empresa.Mensaje;
 import app_empresa.Login;
 import app_empresa.Trabajador;
 import carga_datos.CargaDatosDepart;
-import Db.Conexion;
+import db.Conexion;
 import carga_datos.CargaEmpresa;
 import hilos.AvisadorMovimientoBD;
 import java.io.IOException;
