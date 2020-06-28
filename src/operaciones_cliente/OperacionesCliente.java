@@ -5,7 +5,7 @@
  */
 package operaciones_cliente;
 
-import Db.Conexion;
+import db.Conexion;
 import app_empresa.Cliente;
 import app_empresa.Trabajador;
 import interfaces_operaciones.ICliente;
