@@ -14,6 +14,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Scanner;
 import menu.Menu;
+import menu.MenuTrabajadorComun;
 
 /**
  *
@@ -21,7 +22,7 @@ import menu.Menu;
  */
 public class OperacionesTrabajadorComun implements IDepComun {
 
-    Menu menu = new Menu();
+    MenuTrabajadorComun mtc = new MenuTrabajadorComun();
 
     //Método que devuelve un trabajador si lo encuentra en algún departamento de la empresa
     //sino lo encuentra devuelve null
@@ -50,7 +51,7 @@ public class OperacionesTrabajadorComun implements IDepComun {
     public void enviarCorreo(Empresa nuevaEmpresa, String tDestino, Trabajador tOrigen) {
         Trabajador trabajadorEnviarEmail = this.comprobarUsuarioExiste(nuevaEmpresa, tDestino);
         if (trabajadorEnviarEmail != null) {
-            Mensaje m = menu.escribirMensaje(tOrigen);
+            Mensaje m = mtc.escribirMensaje(tOrigen);
             trabajadorEnviarEmail.addMensaje(m);
             System.out.println("--- Mensaje enviado");
         } else {
@@ -93,7 +94,7 @@ public class OperacionesTrabajadorComun implements IDepComun {
                     System.out.println("   |");
                     m.setContestado(true);
 
-                    String tDestino = menu.responderCorreoACompañero(m.gettOrigen().getUsuario());
+                    String tDestino = mtc.responderCorreoACompañero(m.gettOrigen().getUsuario());
                     this.enviarCorreo(nuevaEmpresa, tDestino, tOrigen);
 
                     System.out.println("");
@@ -118,7 +119,7 @@ public class OperacionesTrabajadorComun implements IDepComun {
         LinkedList<Mensaje> listaMensajes = tOrigen.getMensajes();
         listaMensajes = tOrigen.getMensajes();
         System.out.println("--- Listado de correos No Leídos ");
-        if (listaMensajes.isEmpty()) {
+        if (listaMensajes.isEmpty()) {//Error aquí. la lista puede contener mensajes aunque estén leidos y no entra en el if
             System.out.println("--- Bandeja vacía");
             System.out.println("--- Introduce el número de mensaje que quieres leer (0 para salir)");
             menuComprobarNL = scan.nextInt();
@@ -139,6 +140,9 @@ public class OperacionesTrabajadorComun implements IDepComun {
             System.out.println("| Mensaje: " + m.getCuerpo());
             m.setLeido(true);
         }
+        
+        Menu.detenerFlujo();
+        
         return menuComprobarNL;
     }
 

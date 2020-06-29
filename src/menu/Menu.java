@@ -24,54 +24,6 @@ public class Menu {
 
     Scanner sc = new Scanner(System.in);
 
-    public String formularioLogIn() {
-        System.out.println("********************************");
-        System.out.println("***   Formulario de acceso   ***");
-        System.out.println("********************************");
-        System.out.print("***   Usuario: ");
-        String usuario = sc.nextLine();
-        System.out.print("***   Password: ");
-        String password = sc.nextLine();
-        System.out.println("********************************");
-        System.out.println();
-
-        return usuario + "-" + password;
-    }
-
-    public void comprobarFormulario() {
-        System.out.println("********************************");
-        System.out.println("***  Comprobando el usuario  ***");
-        System.out.println("***      y la contraseña     ***");
-        System.out.println("********************************");
-        System.out.println();
-
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ex) {
-            Thread.currentThread().interrupt();
-        }
-
-    }
-
-    public void bienvenida(Persona p) {
-        System.out.println("********************************");
-        if (p.getSexo() == "Hombre") {
-            System.out.println("***  Bienvenido " + p.getNombre() + " ***");
-        } else {
-            System.out.println("***  Bienvenida " + p.getNombre() + " ***");
-        }
-        System.out.println("_________________________________");
-
-    }
-
-    public void errorFormulario() {
-        System.out.println("********************************");
-        System.out.println("*Usuario o contraseña no válido");
-        System.out.println("*Introduzca de nuevo el usuario");
-
-        this.formularioLogIn();
-    }
-
     public void menuTrabajadorComun() {
         System.out.println("********************************");
         System.out.println("* 0. Salir                     ");
@@ -136,53 +88,6 @@ public class Menu {
         System.out.println("* Funciones especiales para Jefes de departamento");
         System.out.println("*  - Solicitar despido. Mediante un mensaje");
         System.out.println("*  - Solicitar subida de salario de empleado. Lo hará mediante un mensaje.");
-    }
-
-    public String enviarCorreoACompañero() {
-        System.out.println("-------------------------------------------------");
-        System.out.println("--- Enviar correo a compañero");
-        System.out.println();
-        System.out.println("--- Introduzca el usuario al que");
-        System.out.println("---   se le enviará el mensaje");
-        System.out.print("--- Usuario: ");
-        String usuario = sc.nextLine();
-        return usuario;
-    }
-
-    public String responderCorreoACompañero(String tDestino) {
-        System.out.println("--- Responder correo a compañero");
-        System.out.print("--- Origen: " + tDestino);
-        return tDestino;
-    }
-
-    public Mensaje escribirMensaje(Trabajador tOrigen) {
-        Date d = new Date();
-        SimpleDateFormat formatterFecha = new SimpleDateFormat("yyyy-MM-dd");
-        String fechaActual = formatterFecha.format(d);
-        SimpleDateFormat formatterHora = new SimpleDateFormat("HH:mm:ss");
-        String horaActual = formatterHora.format(d);
-
-        System.out.println(" - Día-> " + fechaActual + " - Hora-> " + horaActual);
-
-        System.out.println("-------------------------------------------------");
-        System.out.println("--- Escribir mensaje");
-        System.out.print("--- Asunto: ");
-        String asunto = sc.nextLine();
-        System.out.print("--- Cuerpo: ");
-        String cuerpo = sc.nextLine();
-
-        Mensaje m = new Mensaje(tOrigen, fechaActual, horaActual, asunto, cuerpo, false, false);
-        return m;
-    }
-
-    public void menuCliente() {
-        System.out.println("0. Salir");
-        System.out.println("1. Listar artículos");
-        System.out.println("2. Ver artículo");
-        System.out.println("3. Comprar artículo");
-        System.out.println("4. Ver tus compras");
-        System.out.println("5. Lanzar hilo (Comprueba si se ha hecho un pedido)");
-        System.out.println("6. Detener hilo anterior");
     }
 
     public static void detenerFlujo() {

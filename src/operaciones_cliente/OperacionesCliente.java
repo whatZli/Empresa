@@ -43,7 +43,7 @@ public class OperacionesCliente implements ICliente {
             rs.close();
 
             if (con != null) {
-                Conexion.desconectar();
+                //Conexion.desconectar();
             } else {
                 System.out.println("Conexion no realizada");
             }
@@ -87,7 +87,7 @@ public class OperacionesCliente implements ICliente {
                 rs.close();
                 ps.close();
 
-                Conexion.desconectar();
+                //Conexion.desconectar();
             } else {
                 System.out.println("Conexion no realizada");
             }
@@ -131,7 +131,7 @@ public class OperacionesCliente implements ICliente {
 
                 ps.close();
 
-                Conexion.desconectar();
+                //Conexion.desconectar();
 
                 Menu.detenerFlujo();
 
@@ -179,7 +179,7 @@ public class OperacionesCliente implements ICliente {
 
                 ps.close();
 
-                Conexion.desconectar();
+                //Conexion.desconectar();
 
                 Menu.detenerFlujo();
 

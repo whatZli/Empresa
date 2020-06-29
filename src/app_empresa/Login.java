@@ -11,13 +11,14 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map.Entry;
+import menu.MenuLogin;
 
 /**
  *
  * @author Formacion
  */
 public class Login {
-
+    
     //Recorre todos los departamentos y dentro 
     //de cada departamento recorre todos los 
     //trabajadores hasta encontrar uno

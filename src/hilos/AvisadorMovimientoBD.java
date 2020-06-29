@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.concurrent.TimeUnit;
 
 /**
  *
@@ -67,13 +68,13 @@ public class AvisadorMovimientoBD implements Runnable {
             }
 
             try {
-                System.in.read();
-            } catch (IOException ex) {
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+                Thread.currentThread().interrupt();
             }
 
         }
 
-        Conexion.desconectar();
     }
 
     // metodo para poner el boolean a false.
