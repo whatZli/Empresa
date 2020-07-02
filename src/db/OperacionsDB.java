@@ -10,5 +10,5 @@ package db;
  * @author Formacion
  */
 public class OperacionsDB {
-    
+
 }
