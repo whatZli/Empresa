@@ -10,7 +10,9 @@ package interfaces_operaciones;
  * @author Formacion
  */
 public interface IDepJefeDepartamento {
+
     //Mediante un mensaje
     public void solicitarDespido();
+
     public void solicitarSubidaSalario();
 }

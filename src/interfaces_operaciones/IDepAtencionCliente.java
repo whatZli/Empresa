@@ -10,11 +10,15 @@ package interfaces_operaciones;
  * @author Formacion
  */
 public interface IDepAtencionCliente {
-    
+
     public void modificarCliente();
+
     public void verFichaCliente();
+
     public void buscarCliente();
+
     public void enviarPromocionUnCliente();
+
     public void enviarPromocionTodosClientes();
-    
+
 }

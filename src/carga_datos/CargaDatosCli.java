@@ -13,8 +13,8 @@ import app_empresa.Empresa;
  * @author Formacion
  */
 public class CargaDatosCli {
-    
-    public Empresa CargaDatosCli(Empresa nuevaEmpresa){
+
+    public Empresa CargaDatosCli(Empresa nuevaEmpresa) {
         //Crear clientes
         for (int i = 0; i < 100; i++) {
             Cliente cliente = new Cliente("c" + i, "p", 0, 0, "Cliente" + i, "Apellido1", "Apellido2", "71041502E", "cliente" + i + "@gmail.com", "Mujer", "22-06-2020", null, true);

@@ -14,7 +14,7 @@ import interfaces_operaciones.IDepRRHH;
  *
  * @author Formacion
  */
-public class OperacionesTrabajadorRRHH extends OperacionesTrabajadorComun implements IDepRRHH{
+public class OperacionesTrabajadorRRHH extends OperacionesTrabajadorComun implements IDepRRHH {
 
     @Override
     public void imprimirNominaTrabajador() {
@@ -45,7 +45,5 @@ public class OperacionesTrabajadorRRHH extends OperacionesTrabajadorComun implem
     public void buscarTrabajador() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-
 
 }

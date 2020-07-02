@@ -10,8 +10,9 @@ package interfaces_operaciones;
  * @author Formacion
  */
 public interface IDepCompras {
-    
+
     public void altaProducto();
+
     public void bajaProducto();
-    
+
 }

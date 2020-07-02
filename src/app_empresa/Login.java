@@ -18,7 +18,7 @@ import menu.MenuLogin;
  * @author Formacion
  */
 public class Login {
-    
+
     //Recorre todos los departamentos y dentro 
     //de cada departamento recorre todos los 
     //trabajadores hasta encontrar uno
@@ -36,7 +36,7 @@ public class Login {
             listaTrabajadores = d.getListaTrabajadores();
 
             Trabajador t = listaTrabajadores.get(usuario);
-            
+
             if (t != null) {
                 //System.out.println("Se ha encontrado el trabajador");
                 encontrado = true;

@@ -14,8 +14,8 @@ import java.util.Date;
  *
  * @author Formacion
  */
-public class MenuTrabajadorComun extends Menu{
-    
+public class MenuTrabajadorComun extends Menu {
+
     public String enviarCorreoACompañero() {
         System.out.println("-------------------------------------------------");
         System.out.println("--- Enviar correo a compañero");
@@ -52,5 +52,5 @@ public class MenuTrabajadorComun extends Menu{
         Mensaje m = new Mensaje(tOrigen, fechaActual, horaActual, asunto, cuerpo, false, false);
         return m;
     }
-    
+
 }

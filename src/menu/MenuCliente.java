@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 package menu;
+
 /**
  *
  * @author Formacion
  */
-public class MenuCliente extends Menu{
-    
+public class MenuCliente extends Menu {
+
     public void menuPrincipalCliente() {
         System.out.println("0. Salir");
         System.out.println("1. Listar artículos");
@@ -19,5 +20,5 @@ public class MenuCliente extends Menu{
         System.out.println("5. Lanzar hilo (Comprueba si se ha hecho un pedido)");
         System.out.println("6. Detener hilo anterior");
     }
-    
+
 }

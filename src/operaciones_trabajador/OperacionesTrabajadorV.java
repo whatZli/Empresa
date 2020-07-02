@@ -14,7 +14,7 @@ import interfaces_operaciones.IDepVentas;
  *
  * @author Formacion
  */
-public class OperacionesTrabajadorV extends OperacionesTrabajadorComun implements IDepVentas{
+public class OperacionesTrabajadorV extends OperacionesTrabajadorComun implements IDepVentas {
 
     @Override
     public void aplicarDescuento() {

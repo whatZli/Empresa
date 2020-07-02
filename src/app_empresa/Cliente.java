@@ -22,7 +22,6 @@ public class Cliente extends Persona {
         normal, premium
     };
 
-
     public Cliente(String cod_cliente, String password, int p_acumulado, float saldo, String nombre, String apellido1, String apellido2, String dni, String email, String sexo, String f_alta, String f_baja, boolean activo) {
         super(nombre, apellido1, apellido2, dni, email, sexo, f_alta, f_baja, activo);
         this.cod_cliente = cod_cliente;

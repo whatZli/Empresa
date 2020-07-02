@@ -12,10 +12,16 @@ import app_empresa.Cliente;
  * @author Formacion
  */
 public interface ICliente {
+
     public void listarArticulos();
+
     public void verArticulo(int cod_articulo);
+
     public void comprarArticlo(Cliente c);
+
     public void verTusCompras(Cliente c);
+
     public void lanzarHilo();
+
     public void detenerHilo();
 }

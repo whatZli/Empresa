@@ -23,7 +23,7 @@ public class AvisadorMovimientoBD implements Runnable {
     @Override
     public void run() {
         continuar = true;
-        
+
         Connection con = Conexion.getConexion();
 
         try {

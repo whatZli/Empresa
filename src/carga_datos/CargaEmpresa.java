@@ -18,7 +18,7 @@ public class CargaEmpresa {
         //Crear empresa y carga de datos
         Empresa nuevaEmpresa = new Empresa("Empresa 1", "Calle Magallanes", "123654987D");
         nuevaEmpresa = cgd.cargarTodosLosDatos(nuevaEmpresa);
-        
+
         return nuevaEmpresa;
     }
 }

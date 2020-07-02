@@ -140,9 +140,9 @@ public class OperacionesTrabajadorComun implements IDepComun {
             System.out.println("| Mensaje: " + m.getCuerpo());
             m.setLeido(true);
         }
-        
+
         Menu.detenerFlujo();
-        
+
         return menuComprobarNL;
     }
 

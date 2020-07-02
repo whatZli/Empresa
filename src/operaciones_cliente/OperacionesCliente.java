@@ -151,7 +151,7 @@ public class OperacionesCliente implements ICliente {
                         }
                     }
                 }.start();
-                
+
             } catch (InterruptedException ex) {
                 System.out.println(ex);
             }

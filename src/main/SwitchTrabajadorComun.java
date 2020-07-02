@@ -20,7 +20,7 @@ public class SwitchTrabajadorComun {
 
         OperacionesTrabajadorComun otc = new OperacionesTrabajadorComun();
         MenuTrabajadorComun mtc = new MenuTrabajadorComun();
-        
+
         switch (opcionElegida) {
             case 0:
                 boolean salir = true;

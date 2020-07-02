@@ -10,10 +10,11 @@ package interfaces_operaciones;
  * @author Formacion
  */
 public interface IDepDireccion {
-    
+
     public void despedirEmpleado();
+
     public void informeVentas();
+
     public void informeCompras();
-    
-    
+
 }

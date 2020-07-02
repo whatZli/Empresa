@@ -48,7 +48,7 @@ public class SwitchTrabajadores {
                     if (opcionElegida < 0 || opcionElegida >= numOpciones) {
                         System.out.println("Error -> Introduzca una opción válida");
                     } else {
-                       
+
                         salir = SwitchTrabajadorComun.switchTrabajadorComun(opcionElegida, nuevaEmpresa, userTraLogueado);
 
                     }
@@ -72,7 +72,7 @@ public class SwitchTrabajadores {
                     if (opcionElegida < 0 || opcionElegida >= numOpciones) {
                         System.out.println("Error -> Introduzca una opción válida");
                     } else {
-                        
+
                         salir = SwitchTrabajadorComun.switchTrabajadorComun(opcionElegida, nuevaEmpresa, userTraLogueado);
 
                     }
@@ -95,7 +95,7 @@ public class SwitchTrabajadores {
                     if (opcionElegida < 0 || opcionElegida >= numOpciones) {
                         System.out.println("Error -> Introduzca una opción válida");
                     } else {
-                        
+
                         salir = SwitchTrabajadorComun.switchTrabajadorComun(opcionElegida, nuevaEmpresa, userTraLogueado);
 
                     }
@@ -119,7 +119,7 @@ public class SwitchTrabajadores {
                     if (opcionElegida < 0 || opcionElegida >= numOpciones) {
                         System.out.println("Error -> Introduzca una opción válida");
                     } else {
-                       
+
                         salir = SwitchTrabajadorComun.switchTrabajadorComun(opcionElegida, nuevaEmpresa, userTraLogueado);
 
                     }
@@ -142,7 +142,7 @@ public class SwitchTrabajadores {
                     if (opcionElegida < 0 || opcionElegida >= numOpciones) {
                         System.out.println("Error -> Introduzca una opción válida");
                     } else {
-                        
+
                         salir = SwitchTrabajadorComun.switchTrabajadorComun(opcionElegida, nuevaEmpresa, userTraLogueado);
 
                     }

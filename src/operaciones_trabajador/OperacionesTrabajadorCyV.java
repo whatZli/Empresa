@@ -15,10 +15,9 @@ import interfaces_operaciones.IDepVentas;
  *
  * @author Formacion
  */
-public class OperacionesTrabajadorCyV implements IDepComun,IDepCompras,IDepVentas{
+public class OperacionesTrabajadorCyV implements IDepComun, IDepCompras, IDepVentas {
 
     //Mal implementado*
-
     @Override
     public void checkCorreoDiaConcreto() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -59,9 +58,6 @@ public class OperacionesTrabajadorCyV implements IDepComun,IDepCompras,IDepVenta
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-
-
-
     @Override
     public void enviarCorreo(Empresa nuevaEmpresa, String tDestino, Trabajador tOrigen) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -76,5 +72,5 @@ public class OperacionesTrabajadorCyV implements IDepComun,IDepCompras,IDepVenta
     public int checkCorreoNoLeido(Trabajador t) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

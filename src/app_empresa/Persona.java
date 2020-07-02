@@ -10,7 +10,7 @@ package app_empresa;
  * @author Formacion
  */
 public class Persona {
-    
+
     private String nombre;
     private String apellido1;
     private String apellido2;
@@ -104,7 +104,5 @@ public class Persona {
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
-    
-    
-    
+
 }

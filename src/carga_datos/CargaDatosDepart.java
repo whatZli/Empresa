@@ -33,10 +33,6 @@ public class CargaDatosDepart {
         nuevaEmpresa.addDepartamento(deptCompras);
         nuevaEmpresa.addDepartamento(deptRrhh);
 
-        
-
-        
-
         CargaDatosTrab cdt = new CargaDatosTrab();
         nuevaEmpresa = cdt.cargarDatosTrab(nuevaEmpresa);
 

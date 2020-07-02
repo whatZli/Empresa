@@ -13,18 +13,19 @@ import java.util.List;
  *
  * @author Formacion
  */
-public class Trabajador extends Persona{
+public class Trabajador extends Persona {
+
     private int cod_trabajador;
     private float salario;
     private String usuario;
     private String password;
     private String tipo;
     private boolean es_jefe;
-    
-    static int num_trabajadores=0;
+
+    static int num_trabajadores = 0;
 
     private LinkedList<Mensaje> mensajes = new LinkedList<Mensaje>();
-    
+
     public Trabajador(int cod_trabajador, float salario, String usuario, String password, String tipo, boolean es_jefe, String nombre, String apellido1, String apellido2, String dni, String email, String sexo, String f_alta, String f_baja, boolean activo) {
         super(nombre, apellido1, apellido2, dni, email, sexo, f_alta, f_baja, activo);
         this.cod_trabajador = cod_trabajador;
@@ -37,10 +38,10 @@ public class Trabajador extends Persona{
         mensajes = new LinkedList<Mensaje>();
     }
 
-    public void addMensaje(Mensaje m){
+    public void addMensaje(Mensaje m) {
         this.mensajes.add(m);
     }
-    
+
     public int getCod_trabajador() {
         return cod_trabajador;
     }
@@ -96,7 +97,7 @@ public class Trabajador extends Persona{
     public void setEs_jefe(boolean es_jefe) {
         this.es_jefe = es_jefe;
     }
-    
+
     public static int getNum_trabajadores() {
         return num_trabajadores;
     }

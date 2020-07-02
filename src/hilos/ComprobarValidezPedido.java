@@ -28,7 +28,7 @@ public class ComprobarValidezPedido implements Runnable {
         System.out.println("Esperando confirmación...");
 
         wait();//Bloquea el hilo hasta que el siguiente método no le de confirmación
-        
+
         if (confirmacion) {
             try {
 

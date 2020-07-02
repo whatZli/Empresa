@@ -10,12 +10,17 @@ package interfaces_operaciones;
  * @author Formacion
  */
 public interface IDepRRHH {
-    
+
     public void imprimirNominaTrabajador();
+
     public void imprimirNominasDepartamento();
+
     public void imprimirInformeGastoTotal();
+
     public void darAltaTrabajador();
+
     public void darBajaTrabajador();
+
     public void buscarTrabajador();
-    
+
 }

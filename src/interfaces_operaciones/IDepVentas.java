@@ -10,8 +10,9 @@ package interfaces_operaciones;
  * @author Formacion
  */
 public interface IDepVentas {
-    
+
     public void aplicarDescuento();
+
     public void listarPagos();
-    
+
 }

@@ -14,7 +14,7 @@ import interfaces_operaciones.IDepJefeDepartamento;
  *
  * @author Formacion
  */
-public class OperacionesTrabajadoresJD extends OperacionesTrabajadorComun implements IDepJefeDepartamento{
+public class OperacionesTrabajadoresJD extends OperacionesTrabajadorComun implements IDepJefeDepartamento {
 
     @Override
     public void solicitarDespido() {
@@ -25,6 +25,5 @@ public class OperacionesTrabajadoresJD extends OperacionesTrabajadorComun implem
     public void solicitarSubidaSalario() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 
 }

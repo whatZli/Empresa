@@ -11,7 +11,7 @@ import app_empresa.Persona;
  *
  * @author Formacion
  */
-public class MenuLogin extends Menu{
+public class MenuLogin extends Menu {
 
     public String formularioLogIn() {
         System.out.println("********************************");
