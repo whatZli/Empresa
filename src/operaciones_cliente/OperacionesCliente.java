@@ -8,6 +8,7 @@ package operaciones_cliente;
 import db.Conexion;
 import app_empresa.Cliente;
 import app_empresa.Trabajador;
+import hilos.ComprobarValidezPedido;
 import interfaces_operaciones.ICliente;
 import java.io.IOException;
 import java.sql.Connection;
@@ -16,6 +17,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import menu.Menu;
 
 /**
@@ -115,41 +118,48 @@ public class OperacionesCliente implements ICliente {
         int cantidadComprar = scan.nextInt();
 
         Connection con = Conexion.getConexion();
-        try {
-            if (con != null) {
-                String consulta = "INSERT INTO `pedido` (`cod_pedido`, `cod_cliente`,  `cod_producto`,`cantidad`) VALUES (NULL, ?, ?,?);";
-                PreparedStatement ps = con.prepareStatement(consulta);
 
-                ps.setString(1, c.getCod_cliente());
-                ps.setInt(2, codArticuloComprar);
-                ps.setInt(3, cantidadComprar);
+        if (con != null) {
 
-                int row = ps.executeUpdate();
+            try {
+                final ComprobarValidezPedido cvbd = new ComprobarValidezPedido();
+                cvbd.setCon(con);
+                cvbd.setC(c);
+                cvbd.setCantidadComprar(cantidadComprar);
+                cvbd.setCodArticuloComprar(codArticuloComprar);
 
-                // rows affected
-                System.out.println("Se ha comprado el producto correctamente"); //1
+                new Thread() {
+                    @Override
+                    public void run() {
+                        try {
+                            cvbd.hacerPedido();
+                        } catch (InterruptedException ex) {
+                            System.out.println(ex);
+                        }
+                    }
+                }.start();
 
-                ps.close();
+                Thread.sleep(1000);
 
-                //Conexion.desconectar();
-
-                Menu.detenerFlujo();
-
-            } else {
-                System.out.println("Conexion no realizada");
+                new Thread() {
+                    @Override
+                    public void run() {
+                        try {
+                            cvbd.confirmacion();
+                        } catch (InterruptedException ex) {
+                            System.out.println(ex);
+                        }
+                    }
+                }.start();
+                
+            } catch (InterruptedException ex) {
+                System.out.println(ex);
             }
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-            if (con != null) {
-                try {
-                    con.rollback();
-                } catch (SQLException e1) {
-                    // TODO Auto-generated catch block
-                    e1.printStackTrace();
-                }
-            }
+
+        } else {
+            System.out.println("Conexion no realizada");
         }
+
     }
 
     @Override
@@ -180,7 +190,6 @@ public class OperacionesCliente implements ICliente {
                 ps.close();
 
                 //Conexion.desconectar();
-
                 Menu.detenerFlujo();
 
             } else {

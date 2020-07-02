@@ -4,17 +4,11 @@
  * and open the template in the editor.
  */
 package menu;
-
-import java.util.Scanner;
-
 /**
  *
  * @author Formacion
  */
 public class MenuCliente extends Menu{
-
-    public MenuCliente() {
-    }
     
     public void menuPrincipalCliente() {
         System.out.println("0. Salir");

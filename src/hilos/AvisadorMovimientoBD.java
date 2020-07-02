@@ -6,12 +6,9 @@
 package hilos;
 
 import db.Conexion;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.concurrent.TimeUnit;
 
 /**
  *
@@ -20,12 +17,13 @@ import java.util.concurrent.TimeUnit;
 public class AvisadorMovimientoBD implements Runnable {
 
     private int elementos;
-// boolean que pondremos a false cuando queramos parar el hilo
-    private boolean continuar = true;
+    // boolean que pondremos a false cuando queramos parar el hilo
+    private static volatile boolean continuar;
 
     @Override
     public void run() {
-
+        continuar = true;
+        
         Connection con = Conexion.getConexion();
 
         try {

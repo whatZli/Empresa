@@ -7,7 +7,7 @@ package main;
 
 import app_empresa.Cliente;
 import hilos.AvisadorMovimientoBD;
-import menu.Menu;
+import hilos.ComprobarValidezPedido;
 import menu.MenuCliente;
 import menu.MenuLogin;
 import operaciones_cliente.OperacionesCliente;
@@ -25,7 +25,8 @@ public class SwitchClientes {
         OperacionesCliente oc = new OperacionesCliente();
         //Hilos
         AvisadorMovimientoBD avbd = new AvisadorMovimientoBD();
-        Thread t1 = new Thread(avbd);
+        ComprobarValidezPedido cvbd = new ComprobarValidezPedido();
+        Thread t2 = new Thread(cvbd);
 
         int opcionElegida = -1;
         ml.bienvenida(userCliLogueado);
@@ -50,12 +51,19 @@ public class SwitchClientes {
                     oc.verTusCompras(userCliLogueado);
                     break;
                 case 5:
-                    System.out.println("--- Hilo lanzado");
+                    System.out.println("--- Hilo lanzado comprobar compras");
+                    Thread t1 = new Thread(avbd);
                     t1.start();
                     break;
                 case 6:
-                    System.out.println("--- Hilo parado");
+                    System.out.println("--- Hilo parado comprobar compras");
                     avbd.detenElHilo();
+                    break;
+                case 7:
+                    System.out.println("--- Hilo lanzado evaluar si la compra es válida");
+                    break;
+                case 8:
+                    System.out.println("--- Hilo parado evaluar si la compra es válida");
                     break;
             }
         } while (opcionElegida != 0);

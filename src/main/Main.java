@@ -7,27 +7,10 @@ package main;
 
 import app_empresa.Cliente;
 import app_empresa.Empresa;
-import app_empresa.Mensaje;
 import app_empresa.Login;
 import app_empresa.Trabajador;
-import carga_datos.CargaDatosDepart;
-import db.Conexion;
 import carga_datos.CargaEmpresa;
-import hilos.AvisadorMovimientoBD;
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.LinkedList;
-import java.util.Scanner;
-import menu.Menu;
-import menu.MenuCliente;
 import menu.MenuLogin;
-import menu.MenuTrabajadorComun;
-import operaciones_cliente.OperacionesCliente;
-import operaciones_trabajador.OperacionesTrabajadorComun;
 
 /**
  *

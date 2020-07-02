@@ -5,16 +5,8 @@
  */
 package menu;
 
-import app_empresa.Empresa;
-import app_empresa.Mensaje;
-import app_empresa.Persona;
-import app_empresa.Trabajador;
 import java.io.IOException;
-import static java.lang.Thread.sleep;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 /**
  *
